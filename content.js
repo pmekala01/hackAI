@@ -1,3 +1,10 @@
+chrome.browserAction.onClicked.addListener(() => {
+  parseOpenPDF().then(pdfText => {
+    if (pdfText) {
+      chrome.runtime.sendMessage({ action: 'pdfTextExtracted', data: pdfText });
+    }
+  });
+});
 
 //parseOpenPDF
 async function parseOpenPDF() {
