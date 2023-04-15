@@ -23,7 +23,7 @@
     }
   ],
   "browser_action": {
-    "default_title": "Your extension title",
+    "default_title": "Resume AI HackAI",
     "default_icon": "icon.png"
   }
 }
