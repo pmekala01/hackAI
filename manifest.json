@@ -2,7 +2,7 @@
     "name": "Resume AI HackAI",
     "version": "1.0.0",
     "description": "This extension utilitzes AI to analyze your resume, create a set of potential job titles",
-     "manifest_version": 3,
+     "manifest_version": 2,
   "permissions": [
     "tabs",
     "activeTab"
