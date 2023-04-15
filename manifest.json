@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "description": "This extension utilitzes AI to analyze your resume, create a set of potential job titles",
     "manifest_version": 3,
+    "permissions": [
+        "tabs",
+        "activeTab"
+     ],
     "author": "hackAI group 1000",
     "action": {
         "default_popup": "index.html",
@@ -12,4 +16,14 @@
     "scripts": ["background.js"],
     "persistent": false
   },
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Your extension title",
+    "default_icon": "icon.png"
+  }
 }
