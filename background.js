@@ -1,3 +1,6 @@
 chrome.action.onClicked.addListener((tab) => {
-  parseOpenPDF();
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ['content.js']
+  });
 });
