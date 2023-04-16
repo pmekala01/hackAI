@@ -1,12 +1,11 @@
 {
-    "name": "Resume AI HackAI",
-    "version": "1.0.0",
-    "description": "This extension utilitzes AI to analyze your resume, create a set of potential job titles",
-     "manifest_version": 3,
+  "name": "Resume AI HackAI",
+  "version": "1.0.0",
+  "description": "This extension utilitzes AI to analyze your resume, create a set of potential job titles",
+  "manifest_version": 3,
   "permissions": [
     "tabs",
-    "activeTab",
-    "<all_urls>"
+    "activeTab"
   ],
   "author": "hackAI group 1000",
   "action": {
@@ -31,5 +30,5 @@
       "js": ["content.js"]
     }
   ]
-
 }
+
