@@ -1,4 +1,4 @@
-chrome.browserAction.onClicked.addListener(() => {
+chrome.action.onClicked.addListener((tab) => {
   parseOpenPDF().then(pdfText => {
     if (pdfText) {
       chrome.runtime.sendMessage({ action: 'pdfTextExtracted', data: pdfText });
