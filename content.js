@@ -1,3 +1,5 @@
+importScripts('pdfjs-dist/build/pdf.min.js');
+
 (async () => {
   const currentURL = window.location.href;
 
