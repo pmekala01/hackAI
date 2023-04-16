@@ -1,48 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <script>
-  // Get the external link button
-  const externalLinkBtn = document.getElementById("external-link-btn");
-
-  // Add a click event listener to the external link button
-  externalLinkBtn.addEventListener("click", () => {
-    // Open a new tab with the desired link
-    chrome.tabs.create({ url: "https://example.com" });
-  });
-</script>
-  <meta charset="UTF-8">
-  <title>resAI</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="popup.js" defer></script>
-  <style>
+  <head>
+    <meta charset="UTF-8">
+    <title>resAI</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="popup.js" defer></script>
+    <style>
       /* Button CSS */
       #filter-btn {
         box-sizing: border-box;
         position: absolute;
         top: 16px;
         right: 16px;
-        width: 196px;
-        height: 62px;
-        background: #465362;
-        border: 1px solid #000000;
-        border-radius: 30px;
-        color: #FFFFFF;
-        font-size: 18px;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-      }
-
-
-      /* External Link Button CSS */
-      #external-link-btn {
-        box-sizing: border-box;
-        position: absolute;
-        top: 16px;
-        right: 232px;
         width: 196px;
         height: 62px;
         background: #465362;
@@ -103,27 +72,26 @@
       }
 
     </style>
-</head>
-<body style="min-width:300px;">
-<button id="filter-btn">FILTERS</button>
-<button id="external-link-btn">External Link</button>
-<div class="bubble-container">
-  <div class="bubble-title">Title 1</div>
-  <div class="bubble-caption">
-    This is a sample caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod ligula in augue hendrerit, sed cursus sapien bibendum. Donec non eros eget sapien molestie sollicitudin at ac nisi. Pellentesque in ligula vel nibh elementum semper.
-    <span class="bubble-read-more">Read more</span>
+  </head>
+  <body style="min-width:300px;">
+    <button id="filter-btn">FILTERS</button>
+    <div class="bubble-container">
+      <div class="bubble-title">Title 1</div>
+      <div class="bubble-caption">
+        This is a sample caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod ligula in augue hendrerit, sed cursus sapien bibendum. Donec non eros eget sapien molestie sollicitudin at ac nisi. Pellentesque in ligula vel nibh elementum semper.
+        <span class="bubble-read-more">Read more</span>
+      </div>
+    </div>
+    <div class="bubble-container">
+      <div class="bubble-title">Title 2</div>
+      <div class="bubble-caption">
+        This is another sample caption. Duis laoreet diam a diam bibendum imperdiet. Aliquam eget tristique nulla. Vivamus eu ultricies velit. Nunc a neque vel nisi pharetra faucibus. Morbi non arcu sapien. Ph
+    </div>
   </div>
-</div>
-<div class="bubble-container">
-  <div class="bubble-title">Title 2</div>
-  <div class="bubble-caption">
-    This is another sample caption. Duis laoreet diam a diam bibendum imperdiet. Aliquam eget tristique nulla. Vivamus eu ultricies velit. Nunc a neque vel nisi pharetra faucibus. Morbi non arcu sapien. Ph
-  </div>
-</div>
-<div class="bubble-container">
-  <div class="bubble-title">Title 3</div>
-  <div class="bubble-caption">
-    This is another sample caption. Duis laoreet diam a diam bibendum imperdiet. Aliquam eget tristique nulla. Vivamus eu ultricies velit. Nunc a neque vel nisi pharetra faucibus. Morbi non arcu sapien. Ph
-  </div>
-</body>
+  <div class="bubble-container">
+      <div class="bubble-title">Title 3</div>
+      <div class="bubble-caption">
+          This is another sample caption. Duis laoreet diam a diam bibendum imperdiet. Aliquam eget tristique nulla. Vivamus eu ultricies velit. Nunc a neque vel nisi pharetra faucibus. Morbi non arcu sapien. Ph
+      </div>
+  </body>
 </html>
