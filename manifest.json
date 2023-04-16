@@ -6,6 +6,7 @@
   "permissions": [
     "tabs",
     "activeTab"
+    "<all_urls>"
   ],
   "author": "hackAI group 1000",
   "action": {
