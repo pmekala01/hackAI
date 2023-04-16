@@ -5,7 +5,7 @@ function injectScript(file, callback) {
   document.head.appendChild(script);
 }
 
-injectScript('pdfjs-dist/build/pdf.min.js', async () => {
+async function extractPdfText() {
   const currentURL = window.location.href;
 
   if (currentURL.toLowerCase().endsWith('.pdf')) {
@@ -28,4 +28,12 @@ injectScript('pdfjs-dist/build/pdf.min.js', async () => {
   } else {
     console.log('The current page is not a PDF file.');
   }
+}
+
+injectScript('pdfjs-dist/build/pdf.min.js', () => {
+  extractPdfText();
+
+  // Observe URL changes and re-run the extraction when a PDF is opened
+  const observer = new MutationObserver(extractPdfText);
+  observer.observe(document, { childList: true, subtree: true });
 });
