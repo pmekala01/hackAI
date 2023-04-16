@@ -16,8 +16,11 @@
     "service_worker": "background.js"
   },
   "web_accessible_resources": [
-   {
-     "resources": ["pdfjs-dist/build/pdf.min.js"],
+    {
+      "resources": [
+        "pdfjs-dist/build/pdf.min.js",
+        "pdfjs-dist/build/pdf.worker.min.js"
+      ],
       "matches": ["<all_urls>"]
     }
   ],
