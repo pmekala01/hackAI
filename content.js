@@ -1,6 +1,11 @@
-importScripts('pdfjs-dist/build/pdf.min.js');
+function injectScript(file, callback) {
+  const script = document.createElement('script');
+  script.src = chrome.runtime.getURL(file);
+  script.onload = callback;
+  document.head.appendChild(script);
+}
 
-(async () => {
+injectScript('pdfjs-dist/build/pdf.min.js', async () => {
   const currentURL = window.location.href;
 
   if (currentURL.toLowerCase().endsWith('.pdf')) {
@@ -23,4 +28,4 @@ importScripts('pdfjs-dist/build/pdf.min.js');
   } else {
     console.log('The current page is not a PDF file.');
   }
-})();
+});
