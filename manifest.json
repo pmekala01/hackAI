@@ -12,18 +12,9 @@
     "default_popup": "Main.html",
     "default_title": "ResumeAI HackAI"
   },
-  "background": {
-    "service_worker": "background.js"
+   "background": {
+    "page": "background.html"
   },
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "pdfjs-dist/build/pdf.min.js",
-        "pdfjs-dist/build/pdf.worker.min.js"
-      ],
-      "matches": ["<all_urls>"]
-    }
-  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
