@@ -14,7 +14,7 @@
   },
   "background": {
     "service_worker": "background.js"
-  }
+  },
   "web_accessible_resources": [
    {
      "resources": ["pdfjs-dist/build/pdf.min.js"],
