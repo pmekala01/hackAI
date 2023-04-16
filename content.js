@@ -1,38 +1,10 @@
-chrome.action.onClicked.addListener((tab) => {
-  parseOpenPDF().then(pdfText => {
-    if (pdfText) {
-      chrome.runtime.sendMessage({ action: 'pdfTextExtracted', data: pdfText });
-    }
-  });
-});
-
-//parseOpenPDF
-async function parseOpenPDF() {
+(async () => {
   const currentURL = window.location.href;
 
   if (currentURL.toLowerCase().endsWith('.pdf')) {
-    const pdfData = await fetchPDFData(currentURL);
-    const pdfText = await parsePDFText(pdfData);
-    console.log('Extracted text:', pdfText);
-  } else {
-    console.log('The current page is not a PDF file.');
-  }
-}
-
-//fetchPDFData
-async function fetchPDFData(url) {
-  try {
-    const response = await fetch(url);
+    const response = await fetch(currentURL);
     const data = await response.arrayBuffer();
-    return new Uint8Array(data);
-  } catch (error) {
-    console.error('Error fetching PDF data:', error);
-  }
-}
-
-//parsePDFText
-async function parsePDFText(pdfData) {
-  try {
+    const pdfData = new Uint8Array(data);
     const loadingTask = pdfjsLib.getDocument({ data: pdfData });
     const pdfDocument = await loadingTask.promise;
 
@@ -45,8 +17,8 @@ async function parsePDFText(pdfData) {
       extractedText += textContent.items.map(item => item.str).join(' ');
     }
 
-    return extractedText;
-  } catch (error) {
-    console.error('Error parsing PDF text:', error);
+    console.log('Extracted text:', extractedText);
+  } else {
+    console.log('The current page is not a PDF file.');
   }
-}
+})();
