@@ -18,7 +18,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["pdfjs-dist/build/pdf.min.js", "content.js"],
+      "js": ["pdfjs-dist/build/pdf.min.js", "content.js"]
     }
   ]
 }
