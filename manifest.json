@@ -20,9 +20,5 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ],
-  "browser_action": {
-    "default_title": "Resume AI HackAI",
-    "default_icon": "icon.png"
-  }
+  ]
 }
