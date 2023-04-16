@@ -31,9 +31,9 @@ async function extractPdfText() {
 }
 
 injectScript('pdfjs-dist/build/pdf.min.js', () => {
-  extractPdfText();
-
-  // Observe URL changes and re-run the extraction when a PDF is opened
-  const observer = new MutationObserver(extractPdfText);
-  observer.observe(document, { childList: true, subtree: true });
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === 'extractPdfText') {
+      extractPdfText();
+    }
+  });
 });
