@@ -16,10 +16,16 @@
    "background": {
     "page": "background.html"
   },
-  "content_scripts": [
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "resources": [
+        "pdfjs-dist/build/pdf.min.js",
+        "pdfjs-dist/build/pdf.worker.min.js"
+      ],
+      "matches": ["<all_urls>"]
     }
   ]
 }
