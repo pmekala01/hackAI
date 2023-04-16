@@ -33,6 +33,6 @@
       "matches": ["*://*/*.pdf"],
       "js": ["content.js"]
     }
-  ],
+  ]
 }
 
