@@ -1,97 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>resAI</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="popup.js" defer></script>
     <style>
-      /* Button CSS */
-      #filter-btn {
-        box-sizing: border-box;
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        width: 196px;
-        height: 62px;
-        background: #465362;
-        border: 1px solid #000000;
-        border-radius: 30px;
-        color: #FFFFFF;
-        font-size: 18px;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-      }
+        /* Button CSS */
+        #filter-btn {
+            box-sizing: border-box;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 196px;
+            height: 62px;
+            background: #465362;
+            border: 1px solid #000000;
+            border-radius: 30px;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
 
-      /* Bubble CSS */
-      .bubble-container {
-        position: relative;
-        width: 587px;
-        height: 80px;
-        margin-top: 24px;
-        background-color: #FFFFFF;
-        border: 1px solid #E0E0E0;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        padding: 16px;
-        font-family: 'Spartan', sans-serif;
-        font-size: 16px;
-        line-height: 30px;
-        color: #120101;
-      }
+        /* Bubble CSS */
+        .bubble-container {
+            position: relative;
+            width: 587px;
+            height: 80px;
+            margin-top: 24px;
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 16px;
+            font-family: 'Spartan', sans-serif;
+            font-size: 16px;
+            line-height: 30px;
+            color: #120101;
+        }
 
-      .bubble-title {
-        position: absolute;
-        top: 16px;
-        left: 16px;
-        width: 587px;
-        height: 30px;
-        background-color: #465362;
-        color: #FFFFFF;
-        font-family: 'Space Mono', monospace;
-        font-size: 20px;
-        font-weight: 700;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
+        .bubble-title {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            width: 587px;
+            height: 30px;
+            background-color: #465362;
+            color: #FFFFFF;
+            font-family: 'Space Mono', monospace;
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-      .bubble-caption {
-        position: absolute;
-        top: 52px;
-        left: 16px;
-        right: 16px;
-        bottom: 16px;
-        overflow: auto;
-        text-overflow: clip;
-        white-space: nowrap;
-      }
+        .icon {
+            position: absolute;
+            height: 100%;
+            right: 20px;
+        }
 
+        .icon img {
+             height: 90%;
+             display: inline-block;
+        }
+
+        .bubble-caption {
+            position: absolute;
+            top: 52px;
+            left: 16px;
+            right: 16px;
+            bottom: 16px;
+            overflow: auto;
+            text-overflow: clip;
+            white-space: nowrap;
+        }
     </style>
-  </head>
-  <body style="min-width:300px;">
+</head>
+<body style="min-width:300px;">
     <button id="filter-btn">FILTERS</button>
     <div class="bubble-container">
-      <div class="bubble-title">Title 1</div>
-      <div class="bubble-caption">
-        This is a sample caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod ligula in augue hendrerit, sed cursus sapien bibendum. Donec non eros eget sapien molestie sollicitudin at ac nisi. Pellentesque in ligula vel nibh elementum semper.
-        <span class="bubble-read-more">Read more</span>
-      </div>
+        <div class="bubble-title">Title 1</div>
+        <div class="icon">
+            <img src="picture.png" alt="H">
+            <img src="picture2.png" alt="G">
+        </div>
+        <div class="bubble-caption">
+            This is a sample caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod ligula in augue hendrerit, sed cursus sapien bibendum. Donec non eros eget sapien molestie sollicitudin at ac nisi. Pellentesque in ligula vel nibh elementum semper.
+            <span class="bubble-read-more">Read more</span>
+        </div>
     </div>
     <div class="bubble-container">
-      <div class="bubble-title">Title 2</div>
-      <div class="bubble-caption">
-        This is another sample caption. Duis laoreet diam a diam bibendum imperdiet. Aliquam eget tristique nulla. Vivamus eu ultricies velit. Nunc a neque vel nisi pharetra faucibus. Morbi non arcu sapien. Ph
+        <div class="bubble-title">Title 2</div>
+        <div class="icon">
+            <img src="picture.png" alt="H">
+            <img src="picture2.png" alt="G">
+        </div>
+        <div class="bubble-caption">
+            This is another sample caption. Duis laoreet diam a diam bibendum imperdiet. Aliquam eget tristique nulla. Vivamus eu ultricies velit. Nunc a neque vel nisi pharetra faucibus. Morbi non arcu sapien. Ph
+            <span class="bubble-read-more">Read more</span>
+        </div>
     </div>
-  </div>
-  <div class="bubble-container">
-      <div class="bubble-title">Title 3</div>
-      <div class="bubble-caption">
-          This is another sample caption. Duis laoreet diam a diam bibendum imperdiet. Aliquam eget tristique nulla. Vivamus eu ultricies velit. Nunc a neque vel nisi pharetra faucibus. Morbi non arcu sapien. Ph
-      </div>
-  </body>
+    <div class="bubble-container">
+        <div class="bubble-title">Title 3</div>
+        <div class="icon">
+            <img src="picture.png" alt="H">
+            <img src="picture2.png" alt="G">
+        </div>
+        <div class="bubble-caption">
+            This is another sample caption. Duis laoreet diam a diam bibendum imperdiet. Aliquam eget tristique nulla. Vivamus eu ultricies velit. Nunc a neque vel nisi pharetra faucibus. Morbi non arcu sapien. Ph
+        </div>
+    </div>
+</body>
 </html>
